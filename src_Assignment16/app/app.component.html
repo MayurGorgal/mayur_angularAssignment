@@ -1,0 +1,26 @@
+<!--The content below is only a placeholder and can be replaced.-->
+<div style="text-align:center">
+  <h1>Assignment 4:1</h1>
+  <h2>InterComponent Communication:Parent To Child And Child To Parent</h2>
+
+
+  <button (click)="sendData()">Parent To Child</button>
+
+  <!--
+      1. from parent To child
+          aapn parent to child data directly pass karu shkto
+          property binding ne aapn parent data madhla data ghetala ani to send kela to child
+
+      2.  from Child To Parent
+          (myobj)="child_message=$event"
+
+          (object_name)=> object ch nav EventEmitter chya
+          child_message=> characteristics which is used to accept data recive from child
+          $event=> all inforamtion about the event
+  -->
+  <app-subcomponent [mydata]="parent_message" (myobj)="child_message=$event" ></app-subcomponent>
+
+
+  <h2>{{child_message}}</h2>
+</div>
+
