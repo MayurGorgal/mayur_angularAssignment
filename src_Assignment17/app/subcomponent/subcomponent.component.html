@@ -1,0 +1,6 @@
+
+<button (click)="fetchData()">Fetch Student Info</button>
+
+<ul *ngFor="let value of student_details">
+  <li>{{value.id}}-{{value.name}}-{{value.batch}}-</li>
+</ul>
