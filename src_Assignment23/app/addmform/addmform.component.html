@@ -1,0 +1,27 @@
+<div style="text-align: center">
+<h2>Login Form</h2>
+</div>
+
+
+<form>
+
+  <div class="form-group">
+    <label>Name</label>
+    <input type="text" name="username"  #name="ngModel" minlength="5" class="form-control" required ngModel> 
+    <small class="alert-danger" *ngIf="!name.valid">Name contains minimum 5 characters </small>
+  </div>
+  
+  <div class="form-group">
+      <label>College Name</label>
+      <input type="text" name="clgname" #clgname="ngModel" class="form-control" required ngModel>
+      <small class="alert-danger" *ngIf="!clgname.valid">College name is required</small>
+    </div>
+  
+    <div class="form-group">
+        <label>Password</label>
+        <input type="password"  name="password" minlength="1" maxlength="7" #password="ngModel" class="form-control" ngModel>
+        <small class="alert-danger" *ngIf="!name.touched" >Password contains maximum 7 characters </small>
+      </div>
+      
+      <button>Submit</button>
+</form>
